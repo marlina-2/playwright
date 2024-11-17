@@ -6,7 +6,7 @@ class BasePage {
 
   constructor(page: Page, baseUrl: string) {
     this.page = page;
-    this.baseUrl = 'https://guest:welcome2qauto@qauto.forstudy.space';
+    this.baseUrl = process.env.BASE_URL || '';
   }
 
   async open(): Promise<void> {
