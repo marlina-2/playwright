@@ -38,6 +38,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
+  globalSetup: require.resolve('./setup.ts'),
 
   /* Configure projects for major browsers */
   projects: [
@@ -46,6 +47,7 @@ export default defineConfig({
       testMatch: '**/*.spec.ts',
       use: {
         baseURL: process.env.BASE_URL,
+        storageState: 'storageState.json',
         screenshot:'only-on-failure',
         video:'on',
         headless: process.env.HEADLESS === 'true',
