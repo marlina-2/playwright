@@ -50,7 +50,7 @@ export default defineConfig({
         storageState: 'storageState.json',
         screenshot:'only-on-failure',
         video:'on',
-        headless: process.env.HEADLESS === 'true',
+ //headless: process.env.HEADLESS === 'true',
         ...devices['Desktop Chrome'] },
     }/*,
     {
