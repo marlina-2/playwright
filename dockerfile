@@ -1,5 +1,5 @@
 # Використовуємо офіційний образ Node.js
-FROM mcr.microsoft.com/playwright:v1.32.0-focal
+FROM mcr.microsoft.com/playwright:v1.48.2-noble
 
 # Встановлюємо робочу директорію в контейнері
 WORKDIR /app
